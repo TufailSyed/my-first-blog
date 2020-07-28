@@ -1,5 +1,7 @@
+body {background-color: #92a8d1;}
+
 .page-header {
-    background-color: #C25100;
+    background-color: #0c0236;
     margin-top: 0;
     padding: 20px 20px 20px 50px;
 }
@@ -19,7 +21,7 @@ h1, h2, h3, h4 {
 }
 
 .date {
-    color: #828282;
+    color: #eee5e5;
 }
 
 .save {
@@ -38,11 +40,19 @@ h1, h2, h3, h4 {
 }
 
 .post {
+    margin-top: 20px;
+    text-align: center;
+    background-color: #373f4e;
     margin-bottom: 50px;
+    color: white;
+}
+
+.post_description{
+    color: white;
 }
 
 .post h2 a, .post h2 a:visited {
-    color: #000000;
+    color: white;
 }
 
 .comment {
