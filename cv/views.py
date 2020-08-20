@@ -3,11 +3,13 @@ from django.utils import timezone
 from django.shortcuts import redirect
 from .models import CV, TestModel
 from .forms import CVForm
+from django.contrib.auth.decorators import login_required
 
 def cv(request):
     cvs = CV.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
     return render(request, 'cv/cv.html', {'cvs' : cvs})
 
+@login_required
 def cv_new(request):
     if request.method == "POST":
         form = CVForm(request.POST)
@@ -20,6 +22,7 @@ def cv_new(request):
         form = CVForm()
     return render(request, 'cv/cv_edit.html', {'form': form})
 
+@login_required
 def cv_edit(request, pk):
     cv = get_object_or_404(CV, pk=pk)
     if request.method == "POST":
@@ -32,3 +35,9 @@ def cv_edit(request, pk):
     else:
         form = CVForm(instance=cv)
     return render(request, 'cv/cv_edit.html', {'form': form})
+
+@login_required
+def cv_remove(request, pk):
+    cv = get_object_or_404(CV, pk=pk)
+    cv.delete()
+    return redirect('cv')
