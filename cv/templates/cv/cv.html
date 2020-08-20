@@ -1,17 +1,15 @@
-<html>
-    <title>Tufail Syed</title>
-    <body>
-        <h1>Your To-Do list</h1>
-        <form method="POST">
-            <input name="TestModel_text" id="id_new_TestModel" placeholder="Enter a to-do TestModel" />
-            {% csrf_token %}
-        </form>
-    
-        <table id="id_list_table">
-            {% for TestModel in TestModels %}
-                <tr><td>1: {{ TestModel.text }}</td></tr>
-            {% endfor %}
-        </table>
-    </body>
-</html>
-
+{% extends 'cv/base.html' %}
+{% block content %}
+    {% for cv in cvs %}
+        <div class="cv">
+            <div class="date">
+                <p>published: {{ cv.published_date }}</p>
+            </div>
+            <h2>{{ cv.title }}</a></h2>
+            <div class="cv_text">
+                <p>{{ cv.text|linebreaksbr }}</p>
+            </div>
+            <a class="btn btn-default" href="{% url 'cv_edit' pk=cv.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        </div>
+    {% endfor %}
+{% endblock %}                  
