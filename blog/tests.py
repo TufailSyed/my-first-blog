@@ -4,6 +4,8 @@ from django.http import HttpRequest
 from django.template.loader import render_to_string
 
 from blog.views import post_list, post_detail
+from .models import Post
+from .forms import PostForm
 
 class PostListTest(TestCase):
 
