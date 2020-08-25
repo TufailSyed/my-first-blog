@@ -4,6 +4,7 @@ body {background-color: #92a8d1;}
     background-color: #0c0236;
     margin-top: 0;
     padding: 20px 20px 20px 50px;
+    font-family: 'Indie Flower', cursive;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -17,19 +18,15 @@ body {background-color: #92a8d1;}
 }
 
 h1, h2, h3, h4 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Indie Flower', cursive;
 }
 
 .date {
-    color: #eee5e5;
+    color: black;
 }
 
 .save {
     float: right;
-}
-
-.post-form textarea, .post-form input {
-    width: 100%;
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
@@ -39,22 +36,36 @@ h1, h2, h3, h4 {
     margin-right: 20px;
 }
 
-.post {
+.cv {
     margin-top: 20px;
-    text-align: center;
-    background-color: #373f4e;
+    padding: 10px;
+    font-family: 'Open Sans', cursive;
+    background-color: #dbe1f1;
     margin-bottom: 50px;
-    color: white;
+    color: black;
 }
 
-.post_description{
-    color: white;
+.cv_title {
+    font-family: 'Open Sans', cursive;
+}
+
+.cv_text {
+    text-align: left;
+    font-size: 15px;
 }
 
 .post h2 a, .post h2 a:visited {
-    color: white;
+    color: black;
 }
 
 .comment {
-    margin: 20px 0px 20px 20px;
+    background-color: #dbe1f1;
+    font-family: 'Open Sans', cursive;
+    padding: 10px;
+    margin: 20px 20px 20px 0px;
 }
+
+.cv-form {
+    font-family: 'Open Sans', cursive;
+}
+

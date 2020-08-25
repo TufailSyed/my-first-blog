@@ -2,7 +2,7 @@
 {% block content %}
     {% for cv in cvs %}
         <div class="cv">
-            <h2>{{ cv.title }}</a></h2>
+            <h2 class="cv_title">{{ cv.title }}</a></h2>
             <div class="cv_text">
                 <p>{{ cv.text|linebreaksbr }}</p>
             </div>
