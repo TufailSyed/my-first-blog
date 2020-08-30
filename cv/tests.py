@@ -67,7 +67,7 @@ class CVFormTest(TestCase):
 
     def test_form_save_handles_saving_to_a_list(self):
         CVs = CV.objects.create()
-        form = CVForm(data={'title': 'banter', 'text': 'do me'})
+        form = CVForm(data={'title': 'banter', 'text': 'test me'})
         new_item = form.save()
         self.assertEqual(new_item.title, 'banter')
-        self.assertEqual(new_item.text, 'do me')
+        self.assertEqual(new_item.text, 'test me')

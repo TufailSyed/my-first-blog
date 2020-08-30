@@ -14,7 +14,9 @@ body {background-color: #92a8d1;}
 }
 
 .content {
-    margin-left: 40px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 h1, h2, h3, h4 {
@@ -22,7 +24,7 @@ h1, h2, h3, h4 {
 }
 
 .date {
-    color: black;
+    color: #5f5d5d;
 }
 
 .save {

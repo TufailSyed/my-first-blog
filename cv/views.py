@@ -17,7 +17,7 @@ def cv_new(request):
             cv = form.save(commit=False)
             cv.published_date = timezone.now()
             cv.save()
-            return redirect('cv_edit', pk=cv.pk)
+            return redirect('cv')
     else:
         form = CVForm()
     return render(request, 'cv/cv_edit.html', {'form': form})
